@@ -1,0 +1,20 @@
+		.ORIG	x3000
+		LD		R1,		NUMBERA
+		ADD		R7,		R7,		#1
+		ADD		R6,		R6,		#1
+		ADD		R4,		R4,		#2
+A		ADD		R5,		R4, 	#0
+		ADD		R4,		R4,		R7
+		ADD		R4,		R4,		R7
+		ADD		R7,		R6,		#0
+		ADD		R6,		R5,		#0
+		ADD		R0,		R0,		#-1
+		BRp		A
+		AND		R7,		R7,		R1
+		HALT
+NUMBERA	.FILL	#1023
+NUMBER1	.FILL	#930
+NUMBER2	.FILL	#4
+NUMBER3	.FILL	#30
+NUMBER4	.FILL	#790
+		.END
